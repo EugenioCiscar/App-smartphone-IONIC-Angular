@@ -11,16 +11,20 @@ export class DeseosService{
 
         this.cargarStorage();
 
-        const lista1 = new Lista('Tareas pendientes para empezar proyecto');
-        const lista2 = new Lista('Tareas pendientes para desarrollar proyecto');
-
-        this.listas.push(lista1,lista2);
-        console.log(this.listas)
-
+       
     }
+
+ 
 
     agregarLista(lista:Lista){
         this.listas.push(lista);
+        this.guardarStorage();
+    }
+
+    borrarLista(lista:Lista){
+        this.listas=this.listas.filter(listaData=>{
+            return listaData.id !== lista.id
+        })
         this.guardarStorage();
     }
 
