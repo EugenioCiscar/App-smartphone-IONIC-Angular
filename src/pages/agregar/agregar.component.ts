@@ -15,7 +15,9 @@ export class AgregarPage{
     constructor(public deseosService: DeseosService,
                 private navParams: NavParams){
                     const titulo = this.navParams.get('titulo')
-                    this.lista = new Lista(titulo)
+                    this.lista = new Lista(titulo);
+
+                    this.deseosService.agregarLista(this.lista)
 
     }
     agregarItem(){
