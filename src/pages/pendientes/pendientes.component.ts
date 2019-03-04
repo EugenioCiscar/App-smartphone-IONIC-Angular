@@ -12,27 +12,17 @@ import { AgregarPage } from '../agregar/agregar.component';
 export class PendientesPage{
     constructor(public deseosService: DeseosService,
                 private navCtrl: NavController,
-                private alertCrtl: AlertController){
+                private alertCtrl: AlertController){
 
     }
 
-    listaSeleccionada(lista:Lista){
-       this.navCtrl.push(AgregarPage, {
-           titulo:lista.titulo,
-           lista:lista
-       })
-    }
-
-        borrarLista(lista:Lista){
-            this.deseosService.borrarLista(lista);
-        }
-
+   
 
     agregarLista(){
 
         
 
-        const alerta = this.alertCrtl.create({
+        const alerta = this.alertCtrl.create({
             title:'Nueva lista',
             message:'Nombre de la nueva lista',
             inputs:[{

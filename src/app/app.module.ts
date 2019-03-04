@@ -19,6 +19,10 @@ import {AgregarPage} from '../pages/agregar/agregar.component';
 //servicios
 import { DeseosService } from '../services/deseos.service';
 
+//pipes
+import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completado';
+import { ListasComponent } from '../components/listas.component';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -28,7 +32,9 @@ import { DeseosService } from '../services/deseos.service';
     TabsPage,
     PendientesPage,
     TerminadosPage,
-    AgregarPage
+    AgregarPage,
+    FiltroCompletadoPipe,
+    ListasComponent
   ],
   imports: [
     BrowserModule,
